@@ -1,0 +1,16 @@
+/* ========== Resume Page ========== */
+.resume{
+  display: grid; gap: var(--space);
+  grid-template-columns: 1fr 2fr;
+  margin: 30px 0;
+}
+.sidebar .section{ margin-bottom: 18px; }
+.sidebar .label{ color: var(--muted); font-weight: 600; letter-spacing: .5px; font-size: .95rem; }
+
+.entry{ padding: 14px; border-left: 3px solid rgba(255,255,255,0.08); }
+.entry h3{ margin: 0; }
+.meta{ color: var(--muted); font-size: .95rem; }
+
+@media (max-width: 900px){
+  .resume{ grid-template-columns: 1fr; }
+}

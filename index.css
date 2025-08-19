@@ -1,0 +1,23 @@
+/* ========== Home (Bio/Cover Letter) ========== */
+.hero{
+  display: grid; gap: var(--space);
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  margin: 40px 0 20px;
+}
+.hero img{
+  border-radius: 18px; border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow);
+}
+.badges{
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;
+}
+.badge{
+  font-size: .9rem; padding: 6px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.06); color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 900px){
+  .hero{ grid-template-columns: 1fr; }
+}
