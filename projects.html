@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects · Audrey Arnel</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+
+  <link rel="stylesheet" href="css/projects.css" />
+  <meta name="description" content="Selected projects by Audrey Arnel." />
+</head>
+<body>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> <span>Audrey Arnel</span></a>
+      <nav>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="resume.html" id="nav-resume">Resume</a>
+        <a href="projects.html" id="nav-projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1 class="m3">Projects</h1>
+
+    <section class="grid grid-3 project-grid">
+      <article class="card project-card">
+        <img src="images/project-1-placeholder.jpg" alt="Screenshot of Project 1 (placeholder)">
+        <h3>Project One</h3>
+        <p>Short description of what the project is, your role, and what you learned.</p>
+        <div class="tags">
+          <span class="tag">HTML</span><span class="tag">CSS Grid</span><span class="tag">Responsive</span>
+        </div>
+        <p><a href="#" aria-label="Open Project One link (placeholder)">Live site</a> · <a href="#" aria-label="Open Project One source code (placeholder)">Source</a></p>
+      </article>
+
+      <article class="card project-card">
+        <img src="images/project-2-placeholder.jpg" alt="Screenshot of Project 2 (placeholder)">
+        <h3>Project Two</h3>
+        <p>Short description of the project. Mention problem, approach, and result.</p>
+        <div class="tags">
+          <span class="tag">Flexbox</span><span class="tag">A11y</span>
+        </div>
+        <p><a href="#">Live site</a> · <a href="#">Source</a></p>
+      </article>
+
+      <article class="card project-card">
+        <img src="images/project-3-placeholder.jpg" alt="Screenshot of Project 3 (placeholder)">
+        <h3>Project Three</h3>
+        <p>Short description with outcomes or metrics if available.</p>
+        <div class="tags">
+          <span class="tag">UI</span><span class="tag">Performance</span>
+        </div>
+        <p><a href="#">Live site</a> · <a href="#">Source</a></p>
+      </article>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Audrey Arnel · <a href="mailto:you@example.com">you@example.com</a></div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Set aria-current on the active nav link
+      const map = {
+        'index.html': 'nav-home',
+        'resume.html': 'nav-resume',
+        'projects.html': 'nav-projects'
+      };
+      const page = location.pathname.split('/').pop() || 'index.html';
+      const id = map[page]; if(id){ const el = document.getElementById(id); if(el){ el.setAttribute('aria-current','page'); } }
+    </script>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resume · Audrey Arnel</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css" />
+
+  <link rel="stylesheet" href="css/resume.css" />
+  <meta name="description" content="Resume for Audrey Arnel." />
+</head>
+<body>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> <span>Audrey Arnel</span></a>
+      <nav>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="resume.html" id="nav-resume">Resume</a>
+        <a href="projects.html" id="nav-projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1 class="m3">Resume</h1>
+    <section class="resume">
+      <aside class="sidebar">
+        <div class="card section">
+          <div class="label">Contact</div>
+          <p><strong>Email:</strong> you@example.com</p>
+          <p><strong>Location:</strong> City, State</p>
+          <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
+          <p><strong>GitHub:</strong> github.com/yourhandle</p>
+        </div>
+        <div class="card section">
+          <div class="label">Skills</div>
+          <ul>
+            <li>HTML5, CSS3 (Grid/Flexbox)</li>
+            <li>Responsive Design</li>
+            <li>Accessibility & Semantic Markup</li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="main">
+        <div class="card entry">
+          <h2>Education</h2>
+          <h3>Associate in Biology — Your College</h3>
+          <p class="meta">Expected 202X</p>
+          <ul>
+            <li>Relevant coursework: Web Dev, Pharmacology, etc.</li>
+            <li>Clubs/Activities: …</li>
+          </ul>
+        </div>
+
+        <div class="card entry">
+          <h2>Experience</h2>
+          <h3>Role — Organization</h3>
+          <p class="meta">Month YYYY – Present · City, State</p>
+          <ul>
+            <li>Impactful responsibility or achievement.</li>
+            <li>Another bullet with measurable outcome.</li>
+          </ul>
+        </div>
+
+        <div class="card entry">
+          <h2>Certifications / Awards</h2>
+          <ul>
+            <li>Certification name — YYYY</li>
+            <li>Award name — YYYY</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Audrey Arnel · <a href="mailto:you@example.com">you@example.com</a></div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Set aria-current on the active nav link
+      const map = {
+        'index.html': 'nav-home',
+        'resume.html': 'nav-resume',
+        'projects.html': 'nav-projects'
+      };
+      const page = location.pathname.split('/').pop() || 'index.html';
+      const id = map[page]; if(id){ const el = document.getElementById(id); if(el){ el.setAttribute('aria-current','page'); } }
+    </script>
+  </footer>
+
+</body>
+</html>
